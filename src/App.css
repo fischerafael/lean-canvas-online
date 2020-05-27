@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+:root {
+  --box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font: 400 12px Roboto, sans-serif;
+  color: #333;
+  -webkit-font-smoothing: antialised;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  color: #ccc;     
+}
+
+.lean-container {
   display: flex;
   flex-direction: column;
+  background: #cccccc;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.lean-header {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+.lean-header h1 {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.lean-header p {
+  font-size: 15px; 
+  color: #333;  
+}
+
+.lean-body {
+  background: #333;
+  height: 80vh;
+  width: 1200px;
+  box-shadow: var(--box-shadow);
+}
+
+.lean-body-top {  
+  height: 66%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;  
+  padding: 5px;
+  padding-bottom: 2.5px;
+}
+
+.problema {
+  background: #fff; 
+  grid-row: 1/3;
+}
+
+.solucao {
+  background: #fff;
+  grid-row: 1/2;
+} 
+
+.proposta {
+  background: #fff;
+  grid-row: 1/3;
+}
+
+.vantagem {
+  background: #fff;
+  grid-row: 1/2;
+}
+
+.segmento {
+  background: #fff;
+  grid-row: 1/3;
+}
+
+.metricas {
+  background: #fff;
+  grid-row: 2/3;
+}
+
+.canais {
+  background: #fff;
+  grid-row: 2/3;
+}
+
+.lean-body-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 34%;
+  grid-gap: 5px; 
+  padding: 5px; 
+  padding-top: 2.5px;
+}
+
+.custos {
+  background: #fff;
+}
+
+.receitas {
+  background: #fff;
+}
+
+.field { 
+  width: 100%;  
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header p {
+  padding-top: 10px;
+  padding-left: 15px;
+  color: #333;
+  font-weight: 700;
+}
+
+.header button {
+  height: 20px;
+  width: 100%;
+  border: none;
+  background: #ccc;
+  color:#fff;
+  font-size: 10px;
+  justify-self: flex-end;  
+  cursor: pointer;
+  transition: .5s; 
+  border-radius: 10px; 
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.field button:hover {
+  color: #ccc;
+  background: #333;
+}
+
+form {
+  display: grid; 
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  margin: 15px;
+  grid-gap: 5px;
+}
+
+input {
+  font-size: 10px;
+  width: 100%;
+  height: 20px;  
+  border: none;
+  background: white; 
+  border-radius: 10px;
+  padding-left: 15px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.lean-footer {
+  display: flex;
+  height: 10vh;
+  align-items: center;
+}
+
+.lean-footer p {
+  color: #333; 
+}
+
+li {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  width: 100%; 
+  padding: 0 15px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+li p {
+  color: #333;
+}
+
+.delete {
+  height: 15px;
+  width: 15px;
+  border-radius: 7.5px;
+  border: none;
+  background: rgb(202, 64, 64);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 7.5px;
+  cursor: pointer;
+  transition: .5s;
+  justify-self: flex-end;
 }
